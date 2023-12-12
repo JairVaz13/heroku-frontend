@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-color: #e6e6e6;
+            color: #444;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 20px;
+        }
+
+        input {
+            padding: 15px;
+            margin-bottom: 25px;
+            border: 2px solid #999;
+            border-radius: 8px;
+            font-size: 18px;
+            width: 80%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+    </style>
+    <script type="text/javascript" src="../static/js/borrar_data.js"></script>
+    <script type="text/javascript" src="../static/js/borrar.js"></script>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var email = urlParams.get('email');
+    </script>
+</head>
+
+<body onload="borrar_data()">
+    <a href="https://api-back-rvy8.onrender.com">Regresar</a>
+    <button onclick="borrar(email)">Borrar</button>
+</body>
+
+</html>

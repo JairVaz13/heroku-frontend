@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <style>
+        /* Estilo CSS */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #66a3ff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #4d94ff;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ffb366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff944d;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <script type="text/javascript" src="../static/js/editar_data.js"></script>
+    <script type="text/javascript" src="../static/js/editar.js"></script>
+    <script>
+        // JavaScript
+        function init() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var email = urlParams.get('email');
+            editar_data();
+        }
+    </script>
+
+    <a href="https://api-back-rvy8.onrender.com">Regresar</a>
+    
+    <button onclick="editar(
+        document.getElementById('email').value,
+        document.getElementById('nombre').value,
+        document.getElementById('telefono').value
+    )">Actualizar</button>
+</body>
+
+</html>

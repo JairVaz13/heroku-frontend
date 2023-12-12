@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f4; /* Color de fondo suave */
+        color: #444; /* Color de texto principal */
+        margin: 0;
+        padding: 30px;
+        text-align: center;
+    }
+
+    a {
+        display: inline-block;
+        margin: 20px;
+        padding: 15px 30px;
+        text-decoration: none;
+        color: #fff; /* Color de texto para enlaces */
+        background-color: #5cb85c; /* Color de fondo para enlaces */
+        border-radius: 8px;
+        transition: background-color 0.3s;
+        font-size: 18px;
+    }
+
+    a:hover {
+        background-color: #4cae4c; /* Color de fondo para enlaces al pasar el ratón */
+    }
+
+    table {
+        width: 80%;
+        margin: 30px auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        background-color: #fff; /* Color de fondo para la tabla */
+    }
+
+    th, td {
+        padding: 20px;
+        text-align: left;
+        border-bottom: 2px solid #ddd; /* Color de borde para filas de la tabla */
+    }
+
+    th {
+        background-color: #5cb85c; /* Color de fondo para encabezados de la tabla */
+        color: #fff; /* Color de texto para encabezados de la tabla */
+        font-size: 18px;
+    }
+
+    td {
+        font-size: 16px;
+    }
+
+    td.options {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    button {
+        padding: 15px 30px;
+        background-color: #ff8c00; /* Color de fondo para botones */
+        color: #fff; /* Color de texto para botones */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 18px;
+    }
+
+    button:hover {
+        background-color: #ff7f00; /* Color de fondo para botones al pasar el ratón */
+    }
+</style>
+</head>
+
+<body>
+    <a href="buscar.html">Buscar</a>
+    <a href="insertar.html">Insertar</a>
+    <table border="1" id="table_contactos">
+        <thead id="thead_contactos">
+            <th>Email</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th colspan="3">Opciones</th>
+        </thead>
+        <tbody id="tbody_contactos">
+        </tbody>
+    </table>
+    <script type="text/javascript" src="../static/js/get_all.js"></script>
+    <script>
+        document.body.onload = getAll();
+    </script>
+</body>
+
+</html>
